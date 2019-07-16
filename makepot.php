@@ -455,7 +455,7 @@ class MakePOT {
 		$output = is_null($output)? "$slug.pot" : $output;
 		// inveris
 		global $global_excludes;
-		//$res = $this->xgettext('wp-plugin', $dir, $output, $placeholders);
+		// $res = $this->xgettext('wp-plugin', $dir, $output, $placeholders);
 		$res = $this->xgettext('wp-plugin', $dir, $output, $placeholders, $global_excludes);
 		// /inveris
 		if (!$res) return false;
@@ -488,7 +488,11 @@ class MakePOT {
 			$this->meta['wp-theme']['comments'] = "Copyright (C) {year} {author}\nThis file is distributed under the same license as the {package-name} package.";
 
 		$output = is_null($output)? "$slug.pot" : $output;
-		$res = $this->xgettext('wp-theme', $dir, $output, $placeholders);
+		// inveris
+		global $global_excludes;
+		// $res = $this->xgettext('wp-theme', $dir, $output, $placeholders);
+		$res = $this->xgettext('wp-theme', $dir, $output, $placeholders, $global_excludes);
+		// /inveris
 		if (! $res )
 			return false;
 		$potextmeta = new PotExtMeta;
