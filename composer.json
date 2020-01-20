@@ -1,6 +1,6 @@
 {
 	"name": "inverisoss/wp-i18n-tools",
 	"description": "An extended variant of the WordPress i18n tools including the ability to exclude specified folders.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "GPLv2 or later"
 }
